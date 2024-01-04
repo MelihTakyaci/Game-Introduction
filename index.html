@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Game</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="navBar">
+        <a href="" class="brand">
+            COUNTDOWN
+        </a>
+        <div class="buttons">
+            <button onclick="scrollToElement('about')"><span></span>About Game</button>
+            <button onclick="scrollToElement('character')"><span></span>Characters</button>
+            <button onclick="scrollToElement('mechanic')"><span></span>Mechanics</button>
+        </div>
+        <div class="deuLogo">
+            <a href="https://ceng.deu.edu.tr/">
+                <img src="./images/image-removebg-preview.png">
+            </a>
+        </div>
+    </div>
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-2" src="./images/C__Users_burak_source_repos_pbltumsube_bin_Debug_pbltumsube.exe-2024-01-04-16-29-30.gif">
+                <p id="p1">Pushing</p>
+                <img id="slide-1" src="./images/C__Users_burak_source_repos_pbltumsube_bin_Debug_pbltumsube.exe-2024-01-04-16-27-46.gif">
+                <p id="p2">Smashing</p>
+                <img id="slide-3" src="./images/C__Users_burak_source_repos_pbltumsube_bin_Debug_pbltumsube.exe-2024-01-04-16-31-00.gif"/>
+                <p id="p3">Ready <br>for the challenge?</p>
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+            </div>
+        </div>
+    </section>
+    <h1 class="header" id="about">About Game</h1>
+    <div class="description" id="block">
+        <div class="Introduction">
+            <div class="row" style="font-size: 20px; align-items: center;">
+                <p>Welcome to an exhilarating gaming experience like no other! Immerse yourself in the dynamic world of our game, set in a sprawling 23x53 game field surrounded by outer walls. Here, you take on the role of the iconic "P" character in a thrilling quest for the ultimate high score.</p>
+                <p>Embark on a captivating journey where every move counts, and your strategic prowess will be put to the test. You're not just a player; you're the commander of your destiny, navigating through challenges and unlocking new levels of excitement.</p>
+            </div>
+            <div class="row">
+                <div class="image">
+                </div>
+            </div>
+        </div>
+        <h1 class="header" style="text-align: center;">Characters</h1>
+        <div class="Introduction" id="character">
+            <div class="row" style="align-items: center; display: flex;">
+                <div class="card">
+                    <h1>P</h1>
+                    <h3>Player</h3>
+                </div>
+            </div>
+            <div class="row" style="font-size: 20px;">
+                <p class="head" style="margin-left: auto; margin-right: auto;"><span></span>P: Human player</p>
+                <p>•Cursor keys: To move the human player (4 directions)</p>
+                <p>•Human player can move in empty spaces, push number(s) or smash a number. </p>
+                <p>•At the beginning, human player has 5 lives.  </p>
+
+            </div>
+        </div>
+        <div class="Introduction">
+            <div class="row" id="rownumber" style="display: flex; flex-wrap: wrap;">
+                <div class="card">
+                    <h1>1</h1>
+                    <h3>Number</h3>
+                </div>
+                <div class="card">
+                    <h1>2</h1>
+                    <h3>Number</h3>
+                </div>
+                <div class="card">
+                    <h1>3</h1>
+                    <h3>Number</h3>
+                </div>
+                <div class="card">
+                    <h1>4</h1>
+                    <h3>Number</h3>
+                </div>
+                <div class="card">
+                    <h1>5</h1>
+                    <h3>Number</h3>
+                </div>
+                <div class="card">
+                    <h1>6</h1>
+                    <h3>Number</h3>
+                </div>
+                <div class="card">
+                    <h1>7</h1>
+                    <h3>Number</h3>
+                </div>
+                <div class="card">
+                    <h1>8</h1>
+                    <h3>Number</h3>
+                </div>
+                <div class="card">
+                    <h1>9</h1>
+                    <h3>Number</h3>
+                </div>
+            </div>
+            <div class="row" style="display: flex; flex-direction: column; font-size: 20px; align-items: center;">
+                <p class="head"><span></span>Static Numbers:  9, 8, 7, 6, 5, 4, 3, 2, 1, 0</p>
+                <p >Numbers can be collected by the player by smashing them.</p>
+                <p>•1, 2, 3, 4  :  2 points.</p>
+                <p>•5, 6, 7, 8, 9  :  1 point.</p>
+            </div>
+        </div>
+        <div class="Introduction">
+            <div class="row" style="align-items: center; display: flex;">
+                <div class="card">
+                    <h1>0</h1>
+                    <h3>Zero</h3>
+                </div>
+            </div>
+            <div class="row" style="font-size: 20px;">
+                <p class="head" style="margin-left: auto; margin-right: auto;"><span></span>0: Computer Player</p>
+                <p>•In 1 time unit (in 1 second); each "number 0" can move one square with random direction. If a "number 0" reaches the square of P, the player loses 1 life. If the player loses all lives, the game is over.</p>
+                <p>•0  : 20 points</p>
+            </div>
+        </div>
+        <div class="Introduction" style="flex-direction: column; align-items: center;">
+            <h1>Game mechanics</h1>
+            <div class="mechanic" id="mechanic">
+
+                <div class="description">
+                    <h2>Logic of the Game</h2>
+                    Embark on an electrifying adventure in Countdown, where strategic brilliance meets lightning-fast gameplay. Face off against the formidable "Number 0," moving unpredictably with each passing second. Your objective? Avoid losing lives as the relentless number close in on your square. The stakes are high, and the countdown action intensifies every 15 seconds, keeping you on the edge of your seat.
+                </div>
+                <div class="description">
+                    <h2>Game Characters</h2>
+                    Meet your secret weapon: the Human Player, codenamed P. Move at a staggering 20 times the speed of the encroaching "Number 0," covering ground in a mere 50 milliseconds per move. Maneuver through empty spaces, outpacing your numerical adversaries. The game becomes a thrilling race against time, where your swift actions determine your survival in this mathematical battleground.
+                </div>
+                <div class="description">
+                    <h2>Pushing & Smashing</h2>
+                    Master the art of Pushing! Utilize empty squares strategically to push non-increasing number sequences. Plan your moves carefully, creating sequences that outwit your numerical foes. But that's not all—unleash the power of Smashing! Crush the last number against a wall, showcasing your strategic prowess. However, beware of neighboring squares, which are off-limits for smashing. Navigate the twists and turns with precision to create winning sequences.
+                </div>
+                <div class="description">
+                    <h2 style="margin-top: -35px;">Finalization</h2>
+                    Countdown is more than a game; it's an exhilarating mathematical showdown. With each move, you edge closer to victory or defeat. Can you prove your strategic brilliance and outsmart the relentless numbers? Get ready for Countdown, where strategy meets speed, and only the quickest minds prevail. Are you up for the challenge?
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>Hazırlayanlar: 
+                <ul>
+                    <li>2022 510 107 İzzet Eray Bozkurt</li>
+                    <li>2023 510 224 Burak Kika</li>
+                    <li>2022 510 126 Onur Hüriyetoğlu</li>
+                    <li>2022 510 099 Bekir Aydıngün</li>
+                </ul>
+            </p>
+        </div>
+        
+        <a href="https://eng.deu.edu.tr/tr/">
+            DEÜ Mühendislik Fakültesi
+            <img src="./images/image-removebg-preview (2).png">
+        </a>
+    </footer>
+</body>
+<script src="./script/scroll.js"></script>
+<script src="./script/game.js"></script>
+<script src="./script/opacity.js"></script>
+</html>

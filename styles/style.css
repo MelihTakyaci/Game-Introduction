@@ -1,0 +1,421 @@
+@font-face {
+    font-family: General-Sans;
+    src: url("../component/GeneralSans-Medium.otf")
+}
+@font-face {
+    font-family: General-SMI;
+    src: url(../component/GeneralSans-Semibold.otf);
+}
+@font-face {
+    font-family: Minecraft;
+    src: url(../component/Minecraft.ttf);
+}
+*{
+    font-family: General-Sans;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    color: #fff;
+}
+
+.navBar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+.navBar .brand{
+    font-size: 23px;
+    margin-left: 1.5rem;
+    letter-spacing: .12rem;
+    color: #21C55D;
+    font-family: General-SMI;
+}
+.navBar img{
+    width: 75px;
+    height: 75px;
+}
+.navBar .buttons{
+    display: flex;
+}
+.navBar button{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.5rem;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    transition: 200ms;
+}
+.navBar button span{
+    display: flex;
+    width: 1px;
+    height: 1px;
+    margin-right: 5px;
+    border-radius: 50%;
+    transition: 200ms;
+}
+.navBar button:hover{
+    color: #21C55D;
+}
+.navBar button:hover span{
+    width: 100%;
+    background-color: #21C55D;
+}
+
+.container {
+    width: 100%;
+	padding: 2rem;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 20 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+.slider p{
+    position: relative;
+    margin-top: auto;
+    font-size: 40px;
+    padding-right: 2rem;
+    font-family: Minecraft;
+}
+#p1{
+    margin-left: -180px;
+}
+#p2{
+    margin-left: -220px;
+}
+#p3{
+    margin-left: -190px;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+.link{
+    margin-top: 2rem;
+    font-size: 20px;
+    text-align: center;
+}
+.link h2{
+    margin-bottom: 1rem;
+    font-size: 23px;
+}
+.link button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 1rem;
+    width: 200px;
+    border-radius: .250rem;
+}
+.header{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.description{
+    width: 80%;
+}
+.description h2{
+    margin-bottom: 2rem;
+}
+.Introduction{
+    display: flex;
+    margin-top: 3rem;
+    opacity: 0;
+    transform: translateY(-50px); /* Initial position above the viewport */
+    transform: scale(1.03);
+    transition: opacity 400ms ease-in-out, transform 700ms ease-in-out;
+}
+.Introduction:hover{
+    
+}
+.Introduction.active {
+    opacity: 1;
+    opacity: 1;
+    transform: scale(1.00);
+    transform: translateY(0); /* Move to the original position */
+    transform-origin: center bottom;
+  }
+.Introduction .row{
+    width: 50%;
+    justify-content: center;;
+    padding: 1rem;
+}
+.Introduction .row p{
+    margin-bottom: 3rem;
+}
+.Introduction .row p.head{
+    background-color: rgb(255 , 255 ,255 , .05);
+    color: #21C55D;
+    display: flex;
+    width: fit-content;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    align-items: center;
+}
+.Introduction .row p.head span{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #21C55D;
+    margin-right: 5px;
+}
+.Introduction .row .image{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/Game.jpeg);
+    /* background-color: rgb(255 , 255 ,255 , .25); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .25rem;
+}
+
+.Introduction:nth-child(2){
+    margin-top: 3rem;
+}
+.Introduction .row .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255,0.02);
+    border: 1px solid rgba(255, 255, 255,0.1);
+    height: 200px;
+    width: 30%;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px 3px rgb(255 , 255 ,255 , .03);
+}
+.Introduction .row .card::before{
+    background: radial-gradient( 880px circle at 100px 100px, rgba(255 ,255 ,255 , 0.06), transparent 40% );
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+}
+.Introduction .row .card h1{
+    margin-top: 2rem;
+    font-size: 60px;
+}
+.Introduction .row .card h3{
+    font-size: 25px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+#rownumber .card{
+    width: 30%;
+    margin-left: 1rem;
+    margin-bottom: 1rem; 
+    box-shadow: 0 0 10px 3px rgb(255 , 255 ,255 , .03);
+}
+.Introduction #rownumber .card h1{
+    font-size: 50px;
+}
+.Introduction #rownumber .card h3{
+    font-size: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.Introduction .mechanic{
+        width: 100%;
+        grid-column-gap: 1rem;
+        grid-row-gap: 3rem;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: 3fr;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+}
+.Introduction .description{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255,0.02);
+    border: 1px solid rgba(255, 255, 255,0.1);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    justify-self: center;
+    padding: 20px 30px 30px;
+    /* display: flex;
+    margin-top: 2rem;
+    background-color: rgb(250,250,250,.1);
+    border-radius: 0.875rem;
+    color: rgb(200,200,200);
+    
+    justify-self: center; */
+}
+.Introduction .description::before{
+    background: radial-gradient( 880px circle at 100px 100px, rgba(255 ,255 ,255 , 0.06), transparent 40% );
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+}
+/* Game Screen */
+.gamescreen{
+    width: 100%;
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gamescreen button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 1rem;
+    width: 200px;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+}
+.gamescreen .area{
+    max-width: 100%;
+    width: 800px;
+    height: 500px;
+    background-color: rgb(255 , 255 ,255 , .15);
+}
+/* Footer */
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-top: 1px solid rgb(255 , 255 ,255 , .15);
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+}
+footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+footer img{
+    width: 75px;
+    height: 75px;
+    margin-left: 10px;
+}
+@media screen and (max-width: 769px) {
+    .navBar{
+        padding: 1rem;
+    }
+    .navBar .buttons{
+        display: none;
+    }
+    .navBar .brand{
+        font-size: 16px;
+    }
+    .navBar img{
+        width: 40px;
+        height: 40px;
+    }
+    .navBar .button{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .Introduction{
+        flex-direction: column;
+    }
+    .Introduction .row{
+        width: 100%;
+        padding: 0;
+    }
+    .Introduction .row .card{
+        margin-bottom: 4rem;
+    }
+    .Introduction #rownumber .card{
+        width: 40%;
+    }
+    .gamescreen{
+        display: none;
+    }
+}
